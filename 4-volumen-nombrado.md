@@ -9,7 +9,9 @@ docker volume create <nombre volumen>
 
 ### Crear el volumen nombrado: vol-postgres
 # COMPLETAR CON EL COMANDO
-
+```
+docker volume create vol-postgres
+```
 ## MOUNTPOINT
 Un mountpoint se refiere al lugar en el sistema de archivos donde un dispositivo de almacenamiento se une (o monta) al sistema de archivos. Es el punto donde los archivos y directorios almacenados en ese dispositivo de almacenamiento son accesibles para el sistema operativo y las aplicaciones.
 
@@ -19,6 +21,8 @@ Cuando creas un volumen nombrado, Docker asigna un punto de montaje específico 
 
 ### ¿Cuál es el Mountpoint de vol-postgres?
 # COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+
+El Mountpoint de vol-postgres es /var/lib/docker/volumes/vol-postgres/_data.
 
 ### Estructura del Punto de Montaje:
 - /var/lib/docker/volumes/: Es la ubicación base donde Docker almacena todos los volúmenes en el sistema de archivos del host.
