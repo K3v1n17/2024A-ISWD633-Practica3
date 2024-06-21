@@ -29,17 +29,19 @@ En la carpeta db del host, que estaba inicialmente vacía, ahora se observarán 
 ### Para que persista la información es necesario conocer en dónde wordpress almacena la información.
 # COMPLETAR LA SIGUIENTE ORACIÓN. REVISAR LA DOCUMENTACIÓN DE LA IMAGEN EN https://hub.docker.com/
 En el esquema del ejercicio la carpeta contenedor (b) es /var/www/html
+
 Ruta carpeta host: .../ejercicio3/www
 
 ### Crear un contenedor con la imagen wordpress en la red net-wp, configurar las variables de entorno WORDPRESS_DB_HOST, WORDPRESS_DB_USER, WORDPRESS_DB_PASSWORD y WORDPRESS_DB_NAME (los valores de estas variables corresponden a los del contenedor creado previamente)
 # COMPLETAR CON EL COMANDO
 
+docker run -d --name wordpress-container -p 8080:80 --network net-wp -v C:/Users/LabP3E010/html:/var/www/html -e WORDPRESS_DB_HOST=mysql-container -e WORDPRESS_DB_USER=mi-usuario -e WORDPRESS_DB_PASSWORD=mi-contraseña -e WORDPRESS_DB_NAME=mi-base-de-datos wordpress
 
 ### Personalizar la apariencia de wordpress y agregar una entrada
 
 ### Eliminar el contenedor y crearlo nuevamente, ¿qué ha sucedido?
 
 # COMPLETAR CON LA RESPUESTA A LA PREGUNTA
-
+AL  utilizar volúmenes para persistir los datos de WordPress (archivos de temas, plugins y contenido), los cambios en la apariencia y el contenido se conservarán incluso después de eliminar el contenedor , y al crealo nuevamente los cambios ya personalizados son cargados nuevamente automaticamente.
 
 
